@@ -18,6 +18,12 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "property-01": "url('/properties-options/01 - Sol da Manhã.png')",
+        "property-02": "url('/properties-options/02 - Aceita Pet.png')",
+        "property-03": "url('/properties-options/03 - Boa Internet.png')",
+        "property-04": "url('/properties-options/04 - Tem Varanda.png')",
+        "property-05": "url('/properties-options/05 - Tem Quintal.png')",
+        "property-06": "url('/properties-options/06 - Ônibus Perto.png')",
       },
       container: {
         center: true,
