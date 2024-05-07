@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className={"py-4 fixed w-full bg-white z-50"}>
-      <nav className="relative flex items-center justify-between container text-body px-2">
+      <nav className="container relative flex items-center justify-between text-body">
         <div className="flex items-center justify-center gap-4 lg:gap-8  flex-col lg:flex-row">
           <Link href="/#hero">
             <Image
@@ -41,7 +41,7 @@ const Header = () => {
           >
             <Link
               href={"/#hero"}
-              className="flex rounded-full px-4 py-0.5 border border-secondary text-secondary"
+              className="flex rounded-full px-4 py-0.5 border border-secondary text-secondary hover:bg-secondary hover:text-white"
             >
               Anunciar Imóvel
             </Link>
@@ -58,7 +58,7 @@ const Header = () => {
           >
             <Link
               href={"/#anunciar"}
-              className="rounded-full px-4 py-0.5 border border-secondary text-secondary"
+              className="rounded-full px-4 py-0.5 border border-secondary text-secondary hover:bg-secondary hover:text-white"
             >
               Anunciar Imóvel
             </Link>
