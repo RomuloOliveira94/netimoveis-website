@@ -13,7 +13,7 @@ const PropertyAds = () => {
           <a href="#" className="text-[#2362AF] flex gap-2 items-center">
             Ver todos os imóveis
             <Image
-              src={"/external-icon.svg"}
+              src={"/icons/external-icon.svg"}
               alt="external"
               width={12}
               height={12}
@@ -23,7 +23,7 @@ const PropertyAds = () => {
         <div className="flex items-center gap-2 w-fit">
           <button className="border border-gray-400 rounded-full w-[40px] h-[40px] flex items-center justify-center">
             <Image
-              src={"/arrow-left.svg"}
+              src={"/icons/arrow-left.svg"}
               alt="arrow-left"
               width={12}
               height={12}
@@ -31,7 +31,7 @@ const PropertyAds = () => {
           </button>
           <button className="border border-gray-400 rounded-full w-[40px] h-[40px] flex items-center justify-center">
             <Image
-              src={"/arrow-right.svg"}
+              src={"/icons/arrow-right.svg"}
               alt="arrow-left"
               width={12}
               height={12}
