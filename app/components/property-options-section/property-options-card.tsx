@@ -2,8 +2,13 @@
 
 import InfoCard from "../info-card";
 
-const PropertyOptionsCard = () => {
+interface PropertyOptionsProps {
+  setActiveTab: (index: number) => void;
+}
 
+const PropertyOptionsCard = ({
+  setActiveTab,
+}: PropertyOptionsProps) => {
   const tabsMenu = [
     {
       id: 1,
@@ -84,6 +89,7 @@ const PropertyOptionsCard = () => {
 
   return (
     <InfoCard
+      setCustomTabs={setActiveTab}
       tabs={tabs}
       tabsMenu={tabsMenu}
       styles="mt-8"

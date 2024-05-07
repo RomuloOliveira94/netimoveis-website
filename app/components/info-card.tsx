@@ -22,12 +22,20 @@ interface InfoCardProps {
   }[];
   styles?: string;
   navStyles?: string;
+  setCustomTabs?: (index: number) => void;
 }
 
-const InfoCard = ({ tabsMenu, tabs, styles, navStyles }: InfoCardProps) => {
+const InfoCard = ({
+  tabsMenu,
+  tabs,
+  styles,
+  navStyles,
+  setCustomTabs,
+}: InfoCardProps) => {
   const [activeTab, setActiveTab] = useState(1);
 
   const handleActiveTab = (index: number) => {
+    if (setCustomTabs) setCustomTabs(index);
     setActiveTab(index);
   };
 

@@ -1,3 +1,4 @@
+"use client";
 import InfoCard from "../info-card";
 
 const PresentationCard = () => {
