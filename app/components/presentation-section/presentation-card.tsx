@@ -1,98 +1,55 @@
-"use client";
-
-import Image from "next/image";
-import { useState } from "react";
-import { twMerge } from "tailwind-merge";
+import InfoCard from "../info-card";
 
 const PresentationCard = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const tabMenu = [
+    {
+      id: 1,
+      title: "Alugar Imóvel",
+      icon: "/icons/key-icon.svg",
+    },
+    {
+      id: 2,
+      title: "Comprar Imóvel",
+      icon: "/icons/dolar-icon.svg",
+    },
+    {
+      id: 3,
+      title: "Anunciar Imóvel",
+      icon: "/icons/house-icon.svg",
+    },
+  ];
 
-  const handleActiveTab = (index: number) => {
-    setActiveTab(index);
-  };
+  const tabs = [
+    {
+      id: 1,
+      title: "Alugue sem complicação",
+      description:
+        "Alugue imóveis qualificados e sem repitição. Sed ut perspiciatis unde omnis iste natus error sit.",
+      button: "Ver imóveis para Alugar",
+      button2: "Ver imóveis para Alugar",
+      link1: "Veja como Alugar sem Fiador",
+      link2: "Saiba como funciona o Aluguel na Netimóveis",
+    },
+    {
+      id: 2,
+      title: "Compre com Segurança",
+      description:
+        "Compre seu imóvel com segurança e agilidade. Sed ut perspiciatis unde omnis iste natus error sit.",
+      button: "Ver imóveis para Comprar",
+      link1: "Simule seu Financiamento",
+      link2: "Saiba como funciona a Compra na Netimóveis",
+    },
+    {
+      id: 3,
+      title: "Anuncie seu Imóvel",
+      description:
+        "Anuncie gratuitamente na maior rede de imobiliárias do Brasil.",
+      button: "Anunciar imóvel",
+      link1: "Simule seu Financiamento",
+    },
+  ];
 
-  return (
-    <div className="w-[513px] h-[471px] rounded-xl shadow-md bg-white">
-      <div className="flex justify-between items-center px-10 py-4 relative">
-        <span
-          onClick={() => handleActiveTab(1)}
-          className="flex flex-col gap-2 items-center justify-center text-center cursor-pointer"
-        >
-          <Image
-            src={"/icons/key-icon.svg"}
-            alt={"key"}
-            width={22}
-            height={22}
-          />{" "}
-          Alugar
-          <br /> Imóvel
-          <div
-            className={twMerge(
-              "w-[87px] h-0.5 bg-primary mt-4 absolute bottom-0",
-              activeTab === 1 ? "block" : "hidden"
-            )}
-          ></div>
-        </span>
-        <span
-          onClick={() => handleActiveTab(2)}
-          className="flex flex-col items-center gap-2 justify-center text-center cursor-pointer"
-        >
-          <Image
-            src={"/icons/dolar-icon.svg"}
-            alt={"key"}
-            width={14}
-            height={14}
-          />{" "}
-          Comprar
-          <br /> Imóvel
-          <div
-            className={twMerge(
-              "w-[87px] h-0.5 bg-primary mt-4 absolute bottom-0",
-              activeTab === 2 ? "block" : "hidden"
-            )}
-          ></div>
-        </span>
-        <span
-          onClick={() => handleActiveTab(3)}
-          className="flex flex-col items-center gap-2 justify-center text-center cursor-pointer"
-        >
-          <Image
-            src={"/icons/house-icon.svg"}
-            alt={"key"}
-            width={22}
-            height={22}
-          />{" "}
-          Anunciar
-          <br /> Imóvel
-          <div
-            className={twMerge(
-              "w-[87px] h-0.5 bg-primary mt-4 absolute bottom-0",
-              activeTab === 3 ? "block" : "hidden"
-            )}
-          ></div>
-        </span>
-      </div>
-      <hr />
-      <div className="flex flex-col gap-4 p-10">
-        <div className="flex flex-col gap-2">
-          <h1 className="text-3xl font-bold">Alugue sem complicação</h1>
-          <p className="text-body">
-            Alugue imóveis qualificados e sem repitição. Sed ut perspiciatis
-            unde omnis iste natus error sit.
-          </p>
-        </div>
-        <button className="flex rounded-md px-4 py-2 border border-secondary text-secondary hover:bg-secondary hover:text-white w-fit mt-4">
-          Ver imóveis para Alugar
-        </button>
-        <a href="#" className="underline text-body">
-          Veja como Alugar sem Fiador
-        </a>
-        <a href="#" className="underline text-body">
-          Saiba como funciona o Aluguel na Netimóveis
-        </a>
-      </div>
-    </div>
-  );
+  return <InfoCard tabsMenu={tabMenu} tabs={tabs} />;
 };
 
 export default PresentationCard;
