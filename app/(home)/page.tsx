@@ -7,6 +7,9 @@ import States from "../components/states-section/states";
 import Phrases from "../components/phrases-section/phrases";
 import Blog from "../components/blog-section/blog";
 import Associate from "../components/associate-section/associate";
+import Navigation from "../components/navigations-section/navigation";
+import NavigationFooter from "../components/navigations-section/navigation-footer";
+
 
 export default function Home() {
   return (
@@ -20,6 +23,8 @@ export default function Home() {
       <Phrases />
       <Blog />
       <Associate />
+      <Navigation />
+      <NavigationFooter />
     </main>
   );
 }
