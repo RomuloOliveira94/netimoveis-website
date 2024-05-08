@@ -24,10 +24,12 @@ const config: Config = {
         "property-4": "url('/properties-options/04 - Tem Varanda.png')",
         "property-5": "url('/properties-options/05 - Tem Quintal.png')",
         "property-6": "url('/properties-options/06 - Ônibus Perto.png')",
+        "portugal": "url('/4,1 - Portugal.png')",
+        "presentation": "url('/5 - Apresentação.png')",
       },
       container: {
         center: true,
-        padding: "6rem",
+        padding: "8rem",
       },
     },
   },
