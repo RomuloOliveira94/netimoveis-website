@@ -5,6 +5,7 @@ import PropertyOptions from "../components/property-options-section/property-opt
 import Advertise from "../components/advertise-section/advertise";
 import States from "../components/states-section/states";
 import Phrases from "../components/phrases-section/phrases";
+import Blog from "../components/blog-section/blog";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Advertise />
       <States />
       <Phrases />
+      <Blog />
     </main>
   );
 }
