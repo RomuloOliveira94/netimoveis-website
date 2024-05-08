@@ -63,10 +63,12 @@ const Navigation = () => {
     <section className="container py-20">
       <div className="flex gap-4 items-center p-4 relative">
         {navMenu.map((item) => (
-          <div className="flex flex-col gap-2 items-center justify-center text-center cursor-pointer">
+          <div
+            className="flex flex-col gap-2 items-center justify-center text-center cursor-pointer"
+            key={item.id}
+          >
             <h1
               onClick={() => handleActiveTab(item.id)}
-              key={item.id}
               className="font-bold text-body cursor-pointer"
             >
               {item.title}
@@ -84,7 +86,9 @@ const Navigation = () => {
       <div className="grid grid-cols-4 mt-6">
         {nav.map((item) => (
           <div className="grid gap-2" key={item.id}>
-            <h1 className="font-bold text-body">{item.title}</h1>
+            <h1 className="font-bold text-body" key={item.id}>
+              {item.title}
+            </h1>
             {item.links.map((link) => (
               <Link key={link.name} href={link.path}>
                 {link.name}

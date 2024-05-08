@@ -53,24 +53,24 @@ const NavigationFooter = () => {
     <section className="bg-[#EDF1F4] w-full py-10">
       <div className="container">
         <div className="grid grid-cols-4 items-start my-10">
-          {nav.map((item) => {
-            return (
-              <div className="grid gap-2" key={item.id}>
-                <h1 className="font-bold text-body">{item.title}</h1>
-                {item.links.map((link) => (
-                  <Link key={link.name} href={link.path}>
-                    {link.name}
-                  </Link>
-                ))}
-                {item.id === 4 && (
-                  <div className="flex gap-4 mt-4">
-                    <img src="/icons/google-play.svg" alt="Google Play" />
-                    <img src="/icons/app-store.svg" alt="App Store" />
-                  </div>
-                )}
-              </div>
-            );
-          })}
+          {nav.map((item) => (
+            <div key={item.id} className="grid gap-2">
+              <h1 className="font-bold text-body" key={item.id}>
+                {item.title}
+              </h1>
+              {item.links.map((link) => (
+                <Link key={link.name} href={link.path}>
+                  {link.name}
+                </Link>
+              ))}
+              {item.id === 4 && (
+                <div className="flex gap-4 mt-4">
+                  <img src="/icons/google-play.svg" alt="Google Play" />
+                  <img src="/icons/app-store.svg" alt="App Store" />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
