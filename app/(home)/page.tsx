@@ -4,6 +4,7 @@ import Presentation from "../components/presentation-section/presentation";
 import PropertyOptions from "../components/property-options-section/property-options";
 import Advertise from "../components/advertise-section/advertise";
 import States from "../components/states-section/states";
+import Phrases from "../components/phrases-section/phrases";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <PropertyOptions />
       <Advertise />
       <States />
+      <Phrases />
     </main>
   );
 }
