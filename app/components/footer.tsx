@@ -1,58 +1,59 @@
+import Image from "next/image";
 import Link from "next/link";
 
-const Navigation = () => {
-  const nav = [
-    {
-      title: "Alugar",
-      links: [
-        { name: "Apartamentos", path: "/" },
-        { name: "Casas", path: "/" },
-        { name: "Terrenos", path: "/" },
-        { name: "Lojas", path: "/" },
-      ],
-    },
-    {
-      title: "Comprar",
-      links: [
-        { name: "Casas à venda", path: "/" },
-        { name: "Imóv. em Condomínios", path: "/" },
-        { name: "Comprar terrenos", path: "/" },
-        { name: "Lançamentos", path: "/" },
-      ],
-    },
-    {
-      title: "Comercial",
-      links: [
-        { name: "imóveis com escritório", path: "/" },
-        { name: "Prédio comercial", path: "/" },
-        { name: "Galpão de Armazenamento", path: "/" },
-        { name: "Salão de Eventos", path: "/" },
-      ],
-    },
-  ];
-
+const Footer = () => {
   return (
-    <section className="container py-20">
-      <div className="flex gap-4 items-center p-4">
-        <span>Tipos de Propriedades</span>
-        <span>Populares para Venda</span>
-        <span>Populares para Locação</span>
-      </div>
-      <hr />
-      <div className="grid grid-cols-4 mt-6">
-        {nav.map((item) => (
-          <div className="grid gap-2" key={item.title}>
-            <h1 className="font-bold text-body">{item.title}</h1>
-            {item.links.map((link) => (
-              <Link key={link.name} href={link.path}>
-                {link.name}
-              </Link>
-            ))}
+    <section className="bg-primary w-full py-4">
+      <div className="container flex justify-between items-center">
+        <Link href="/#hero">
+          <Image
+            src={"/logo-no-bg.png"}
+            alt="Netimóveis"
+            width={150}
+            height={50}
+          />
+        </Link>
+        <div className="text-white flex flex-col gap-2">
+          <span>
+            © Copyright 2021 Netimóveis Brasil SA. Todos os direitos reservados.
+          </span>
+          <div className="flex gap-4">
+            <Link href={"/"}>Política de privacidade </Link>
+            <Link href={"/"}>Termos de uso</Link>
+            <Link href={"/"}>LGPD</Link>
+            <span>Versão: 25/10/2021</span>
           </div>
-        ))}
+        </div>
+
+        <div className="flex items-center gap-4">
+          <Image
+            src={"/social-media/instagram.svg"}
+            alt="Google Play"
+            width={38}
+            height={38}
+          />
+          <Image
+            src={"/social-media/facebook.svg"}
+            alt="Google Play"
+            width={38}
+            height={38}
+          />
+          <Image
+            src={"/social-media/youtube.svg"}
+            alt="Google Play"
+            width={38}
+            height={38}
+          />
+          <Image
+            src={"/social-media/linkedin.svg"}
+            alt="Google Play"
+            width={38}
+            height={38}
+          />
+        </div>
       </div>
     </section>
   );
 };
 
-export default Navigation;
+export default Footer;
