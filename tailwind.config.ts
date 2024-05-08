@@ -29,7 +29,7 @@ const config: Config = {
       },
       container: {
         center: true,
-        padding: "6rem",
+        padding: "8rem",
       },
     },
   },

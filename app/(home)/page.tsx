@@ -6,6 +6,7 @@ import Advertise from "../components/advertise-section/advertise";
 import States from "../components/states-section/states";
 import Phrases from "../components/phrases-section/phrases";
 import Blog from "../components/blog-section/blog";
+import Associate from "../components/associate-section/associate";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <States />
       <Phrases />
       <Blog />
+      <Associate />
     </main>
   );
 }
