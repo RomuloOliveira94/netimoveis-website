@@ -9,9 +9,6 @@ class PlaceList {
 
   searchByText(text: string): PlaceType[] {
     const searchText = text.toLowerCase();
-    if (searchText === "") {
-      return [];
-    }
     return this.properties.filter(
       (place) =>
         place.name.toLowerCase().includes(searchText) ||
